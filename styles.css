@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top, #0b2c6f, #041026 60%);
+  color: #f8f2d6;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 12px;
+}
+
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  color: #ffd25f;
+}
+
+h1 {
+  margin: 6px 0 8px;
+  font-size: 32px;
+}
+
+.question {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.round-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.select {
+  background: #091c4a;
+  border: 1px solid #4162b3;
+  color: #f8f2d6;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.board {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.board__answers {
+  background: rgba(9, 28, 74, 0.6);
+  border: 1px solid #24418a;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(1, 6, 18, 0.4);
+}
+
+.answers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.answer-tile {
+  position: relative;
+  background: linear-gradient(135deg, #0a1f54, #152f72);
+  border: 2px solid #ffd25f;
+  border-radius: 16px;
+  padding: 18px 20px;
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: inherit;
+}
+
+.answer-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.answer-tile__index {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffd25f;
+}
+
+.answer-tile__text {
+  flex: 1;
+  margin: 0 12px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.answer-tile__points {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.answer-tile.is-hidden .answer-tile__text,
+.answer-tile.is-hidden .answer-tile__points {
+  visibility: hidden;
+}
+
+.answer-tile.is-hidden {
+  background: linear-gradient(135deg, #07153a, #0b245f);
+}
+
+.board__controls {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.board__sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panel {
+  background: rgba(9, 28, 74, 0.6);
+  border: 1px solid #24418a;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.panel__controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.strikes {
+  display: flex;
+  gap: 10px;
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.strike {
+  opacity: 0.2;
+  color: #ff5c5c;
+  text-shadow: 0 0 8px rgba(255, 92, 92, 0.5);
+}
+
+.strike.is-active {
+  opacity: 1;
+}
+
+.scores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.score {
+  background: rgba(5, 16, 40, 0.6);
+  border: 1px solid #1a3d85;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+.score h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.score__value {
+  font-size: 32px;
+  margin: 6px 0 10px;
+  font-weight: 700;
+}
+
+.score__adjust {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.round-total {
+  margin: 14px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn {
+  background: #ffd25f;
+  color: #091c4a;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: #f8f2d6;
+  border: 1px solid #ffd25f;
+}
+
+.btn--danger {
+  background: #ff5c5c;
+  color: #120309;
+}
+
+.footer {
+  text-align: center;
+  padding: 12px 16px 24px;
+  font-size: 13px;
+  color: rgba(248, 242, 214, 0.7);
+}
+
+.error {
+  color: #ffd25f;
+  font-weight: 600;
+  margin: 0;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+@media (max-width: 900px) {
+  .board {
+    grid-template-columns: 1fr;
+  }
+
+  .scores {
+    grid-template-columns: 1fr;
+  }
+}
