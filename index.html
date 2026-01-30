@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family Feud Game Board</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div>
+          <p class="eyebrow">Family Feud Board</p>
+          <h1 id="round-title">Round 1</h1>
+          <p id="round-question" class="question">Loading rounds...</p>
+        </div>
+        <div class="round-controls">
+          <button id="prev-round" class="btn btn--ghost" type="button">
+            ◀ Previous
+          </button>
+          <select id="round-select" class="select" aria-label="Select round"></select>
+          <button id="next-round" class="btn btn--ghost" type="button">
+            Next ▶
+          </button>
+        </div>
+      </header>
+
+      <main class="board">
+        <section class="board__answers">
+          <div id="answers-grid" class="answers-grid" aria-live="polite"></div>
+          <div class="board__controls">
+            <button id="reveal-all" class="btn" type="button">Reveal All</button>
+            <button id="hide-all" class="btn btn--ghost" type="button">
+              Hide All
+            </button>
+          </div>
+        </section>
+
+        <aside class="board__sidebar">
+          <div class="panel">
+            <h2>Strikes</h2>
+            <div id="strikes" class="strikes" aria-label="Strike indicators">
+              <span class="strike">X</span>
+              <span class="strike">X</span>
+              <span class="strike">X</span>
+            </div>
+            <div class="panel__controls">
+              <button id="add-strike" class="btn btn--danger" type="button">
+                Add Strike
+              </button>
+              <button id="clear-strikes" class="btn btn--ghost" type="button">
+                Clear Strikes
+              </button>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h2>Scores</h2>
+            <div class="scores">
+              <div class="score">
+                <h3>Team A</h3>
+                <p id="score-a" class="score__value">0</p>
+                <button id="add-a" class="btn" type="button">
+                  Add Round Points
+                </button>
+                <div class="score__adjust">
+                  <button data-team="a" data-delta="5" class="btn btn--ghost" type="button">
+                    +5
+                  </button>
+                  <button data-team="a" data-delta="-5" class="btn btn--ghost" type="button">
+                    -5
+                  </button>
+                </div>
+              </div>
+              <div class="score">
+                <h3>Team B</h3>
+                <p id="score-b" class="score__value">0</p>
+                <button id="add-b" class="btn" type="button">
+                  Add Round Points
+                </button>
+                <div class="score__adjust">
+                  <button data-team="b" data-delta="5" class="btn btn--ghost" type="button">
+                    +5
+                  </button>
+                  <button data-team="b" data-delta="-5" class="btn btn--ghost" type="button">
+                    -5
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p class="round-total">
+              Round points revealed:
+              <span id="round-total">0</span>
+            </p>
+            <button id="reset-scores" class="btn btn--ghost" type="button">
+              Reset Scores
+            </button>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>
+        Tip: Run with VS Code Live Server or
+        <code>python -m http.server</code> for local JSON loading.
+      </p>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

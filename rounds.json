@@ -1,0 +1,46 @@
+{
+  "rounds": [
+    {
+      "title": "Round 1",
+      "question": "Name something people do before going to bed.",
+      "answers": [
+        { "text": "Brush teeth", "points": 32 },
+        { "text": "Set an alarm", "points": 21 },
+        { "text": "Check phone", "points": 17 },
+        { "text": "Wash face", "points": 11 },
+        { "text": "Read", "points": 9 },
+        { "text": "Lock doors", "points": 6 },
+        { "text": "Snack", "points": 3 },
+        { "text": "Pray/meditate", "points": 1 }
+      ]
+    },
+    {
+      "title": "Round 2",
+      "question": "Name something you would bring on a camping trip.",
+      "answers": [
+        { "text": "Tent", "points": 34 },
+        { "text": "Sleeping bag", "points": 26 },
+        { "text": "Flashlight", "points": 14 },
+        { "text": "Food", "points": 10 },
+        { "text": "Matches", "points": 6 },
+        { "text": "Bug spray", "points": 5 },
+        { "text": "First aid kit", "points": 3 },
+        { "text": "Fishing rod", "points": 2 }
+      ]
+    },
+    {
+      "title": "Round 3",
+      "question": "Name something people do while waiting in a long line.",
+      "answers": [
+        { "text": "Look at phone", "points": 38 },
+        { "text": "Talk to someone", "points": 16 },
+        { "text": "Check the time", "points": 12 },
+        { "text": "Listen to music", "points": 10 },
+        { "text": "Complain", "points": 8 },
+        { "text": "Play a game", "points": 6 },
+        { "text": "Read a book", "points": 5 },
+        { "text": "People watch", "points": 5 }
+      ]
+    }
+  ]
+}
